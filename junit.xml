@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="unit_tests" tests="3" assertions="1" failures="1" errors="2" time="0.002859">
+    <testsuite name="EmailTest" file="/var/www/html/php_jen/tests/EmailTest.php" tests="3" assertions="1" failures="1" errors="2" time="0.002859">
+      <testcase name="testCanBeCreatedFromValidEmailAddress" class="EmailTest" file="/var/www/html/php_jen/tests/EmailTest.php" line="6" assertions="0" time="0.001810">
+        <error type="PHPUnit_Framework_ExceptionWrapper">EmailTest::testCanBeCreatedFromValidEmailAddress
+ParseError: syntax error, unexpected '}'
+
+/var/www/html/php_jen/src/Email.php:11
+/var/www/html/php_jen/tests/EmailTest.php:10
+</error>
+      </testcase>
+      <testcase name="testCannotBeCreatedFromInvalidEmailAddress" class="EmailTest" file="/var/www/html/php_jen/tests/EmailTest.php" line="14" assertions="1" time="0.000792">
+        <failure type="PHPUnit_Framework_ExpectationFailedException">EmailTest::testCannotBeCreatedFromInvalidEmailAddress
+Failed asserting that exception of type "ParseError" matches expected exception "InvalidArgumentException". Message was: "syntax error, unexpected '}'" at
+/var/www/html/php_jen/src/Email.php:11
+/var/www/html/php_jen/tests/EmailTest.php:18
+.
+
+</failure>
+      </testcase>
+      <testcase name="testCanBeUsedAsString" class="EmailTest" file="/var/www/html/php_jen/tests/EmailTest.php" line="21" assertions="0" time="0.000257">
+        <error type="PHPUnit_Framework_ExceptionWrapper">EmailTest::testCanBeUsedAsString
+ParseError: syntax error, unexpected '}'
+
+/var/www/html/php_jen/src/Email.php:11
+/var/www/html/php_jen/tests/EmailTest.php:25
+</error>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testsuites>
