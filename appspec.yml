@@ -1,0 +1,11 @@
+version: 0.0
+Resources:
+  - TargetService:
+      Type: AWS::EC2::Service
+
+Hooks:
+  - BeforeInstall: "LambdaFunctionToValidateBeforeInstall"
+  - AfterInstall: "LambdaFunctionToValidateAfterTraffic"
+  - AfterAllowTestTraffic: "LambdaFunctionToValidateAfterTestTrafficStarts"
+  - BeforeAllowTraffic: "LambdaFunctionToValidateBeforeAllowingProductionTraffic"
+  - AfterAllowTraffic: "LambdaFunctionToValidateAfterAllowingProductionTraffic"
