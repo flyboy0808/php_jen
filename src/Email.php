@@ -12,7 +12,7 @@ final class Email
 
     public static function fromString($email)
     {
-        return new self($email);
+        return new self($email)appu;
     }
 
     public function __toString()
